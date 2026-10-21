@@ -297,3 +297,10 @@ body{background:transparent}
 }
 .closing .top{color:rgba(251,247,240,.82)}
 .closing .top:hover{color:#e6d49c}
+
+/* Hole sponsors: logo tiles; sponsors without a logo get a matching name tile */
+.sponsor-logos{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0}
+.sponsor-logos img,.sponsor-mark{height:84px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+.sponsor-logos img{width:auto;max-width:150px;padding:6px 10px;object-fit:contain}
+.sponsor-mark{display:inline-flex;align-items:center;padding:0 16px;font:400 17px/1.2 var(--serif);color:var(--ink)}
+.card.sponsor .who{margin:12px 0 0}

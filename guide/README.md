@@ -16,6 +16,8 @@ All event details come from the client's flyer (21 October 2026): date, venue, 1
 
 The dress code (white golf T-shirt, black pants) was confirmed by the client on 21 October 2026. The guide is published on the draw site at `/info/`: after editing `dist/`, run `npm run sync:guide` in `../draw`.
 
-Not yet supplied, so not on the page: registration time, schedule after tee-off, on-course competitions, hole sponsors, venue address and an email contact.
+Hole sponsors (client, 21 October 2026): hole 1 Mnandi Meats and LCM Ludidi Properties, hole 12 Isiqu Accountants (Hole in One; no logo yet, shown as a name tile), hole 18 Ndabe Funeral. Logos are in `dist/assets/sponsors/`.
+
+Not yet supplied, so not on the page: registration time, schedule after tee-off, on-course competitions, venue address and an email contact.
 
 Brand colours: deep green `#0f2a1d`, gold `#b8902f`.
