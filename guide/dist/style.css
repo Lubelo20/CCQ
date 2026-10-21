@@ -189,6 +189,11 @@ body{overflow-x:clip}
   .card h3{font-size:20px;margin-bottom:8px}
   .card .label{letter-spacing:.3em}
   .card .time{font-size:27px}
+  /* The Day: compact label/value rows instead of three tall cards */
+  .tee-row{gap:8px}
+  .tee-row .card{display:grid;grid-template-columns:auto 1fr;align-items:baseline;column-gap:12px;padding:16px 20px}
+  .tee-row .card .time{margin:0;text-align:right;font-size:22px}
+  .tee-row .card .who{grid-column:2;margin:2px 0 0;text-align:right}
   /* time and food stations become compact rows */
   .stations{gap:8px;margin-top:12px}
   .stations>div{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 12px;text-align:left;padding:14px 18px}

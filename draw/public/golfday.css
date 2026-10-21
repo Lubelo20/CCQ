@@ -116,7 +116,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .status{padding:6px 10px;border:1px solid rgba(255,255,255,.22);border-radius:999px;font:500 8.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#d9d4cc;white-space:nowrap;flex:none;min-width:116px;text-align:center}
 .status.complete{border-color:rgba(230,212,156,.55);color:var(--accent-soft)}
 .card-body{padding:20px 22px 22px}
-.group-label{margin:0;font:500 9px/1.6 var(--sans);letter-spacing:.32em;color:var(--accent-text)}
+.group-label{margin:0;font:500 9px/1.6 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--accent-text)}
 .card h3{margin:0;font-size:23px;line-height:1.25;min-width:0;overflow-wrap:anywhere}
 /* Company logo tile beside the organisation name; monogram of initials when no logo is on file */
 .org{display:flex;align-items:center;gap:14px;min-height:96px;margin:10px 0 16px}
@@ -132,6 +132,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .players li{display:flex;gap:14px;align-items:baseline;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
 .players .number{font:400 13px/1 var(--serif);color:var(--accent-text);font-variant-numeric:lining-nums}
 .players .pending{font-style:italic;color:var(--muted)}
+.tee-heading{grid-column:1/-1;display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:18px 0 0;padding-bottom:10px;border-bottom:1px solid var(--line);font:400 26px/1.2 var(--serif);color:var(--accent-text);font-variant-numeric:lining-nums}
+.info-link{margin:18px 0 0;text-align:center}
+.tee-heading:first-child{margin-top:0}
+.tee-heading span{font:500 9px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
 .empty-state{padding:48px 24px;text-align:center;background:var(--card);border:1px solid var(--line-soft);border-radius:var(--radius);box-shadow:var(--shadow)}
 .empty-state h3{font-size:24px;margin-bottom:6px}
 .empty-symbol{display:block;width:40px;height:40px;margin:0 auto 10px;color:var(--accent)}
@@ -190,6 +194,13 @@ a[href^="tel:"]{white-space:nowrap}
   .tabs{width:100%;flex-wrap:nowrap;gap:4px}.tabs button{flex:1;justify-content:center;gap:5px;padding:13px 2px;font-size:9px;letter-spacing:.04em;white-space:nowrap}
   .grid{grid-template-columns:1fr;gap:14px}
   .card-head,.tee{gap:10px}.tee span{letter-spacing:.2em}
+  .card-head{padding:14px 18px}.card-body{padding:14px 18px 16px}
+  .org{min-height:0;margin:2px 0 12px;gap:12px}.org-logo{width:72px;height:50px}.card h3{font-size:21px}
+  .group-label{margin-bottom:6px}
+  .players li{padding:8px 0}
+  .tee-heading{font-size:23px;margin-top:12px}
+  .stat{padding:14px 10px}.stat strong{font-size:28px;margin:8px 0 2px}.stat small{font-size:11px}
+  #print{display:none}
   .stations{grid-template-columns:1fr;gap:8px}
   .stations>div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;text-align:left;padding:14px 18px}
   .stations b{font-size:20px}.stations span{margin:0;text-align:right}
@@ -197,6 +208,7 @@ a[href^="tel:"]{white-space:nowrap}
   .closing h2{font-size:27px}
   .closing .meta{max-width:250px;margin:0 auto}
   .contact a{width:100%}
+  .info-link .btn{width:100%}
   .closing-links{gap:8px 20px;flex-wrap:wrap;margin-top:32px}
   .closing-links a{display:inline-flex;align-items:center;gap:6px;padding:14px 6px}
   .results-row .text-button{padding:14px 0 12px}
