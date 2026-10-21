@@ -2,13 +2,13 @@
 // the CSP only allows same-origin images). Keys are normalised organisation names; anything without
 // a logo falls back to a monogram of its initials.
 // tone: 'dark' for white logos, 'navy' for logos on OD Investments' blue; default is a white tile.
-// mark: the logo doesn't spell out the organisation's name, so the name is always shown beside it.
+// mark: show the name beside the logo. Every CCQ logo sets it so all draw cards share one layout.
 // wide: a mark too detailed for the small tile (e.g. two sponsor logos side by side) — full width, name below.
 const LOGOS = {
   'shaka langa': { file: 'mnandi-meats.png', mark: true },
-  'mthoko mtshali': { file: 'galela-mashenge-foundation.png', tone: 'dark', mark: true, wide: true }, // cut from a Mashenge Open poster; replace with an original file if supplied
+  'mthoko mtshali': { file: 'galela-mashenge-foundation.png', tone: 'dark', mark: true }, // cut from a Mashenge Open poster; replace with an original file if supplied
   'president dlomo': { file: 'od-investments.jpg', tone: 'navy', mark: true },
-  'ndabe': { file: 'ndabe-dignified-group.png' },
+  'ndabe': { file: 'ndabe-dignified-group.png', mark: true },
 };
 const LEGAL = /\b(pty|ltd|inc|npc|limited|cc)\b/g;
 const key = name => name.toLowerCase().replace(/[’']/g, '').replace(/&/g, ' and ').replace(LEGAL, ' ').replace(/[^a-z0-9]+/g, ' ').trim();

@@ -169,7 +169,7 @@ body{overflow-x:clip}
   .crest{width:210px;margin-bottom:20px}
   .hero .eyebrow{letter-spacing:.38em}
   .hero h1{font-size:32px;line-height:1.15;margin-top:14px}
-  .edition{gap:0;margin:20px 0 10px;font-size:9px;letter-spacing:.32em}
+  .edition{gap:0;margin:20px 0 10px;font-size:9px;line-height:1.8;letter-spacing:.32em;text-align:center}
   .edition:before,.edition:after{display:none}
   .hero .meta{font-size:13px;line-height:1.6;max-width:260px;margin:0 auto}
   .countdown{width:100%;margin-top:26px}.countdown div{flex:1;min-width:0;padding:12px 2px}.countdown strong{font-size:30px}.countdown span{letter-spacing:.12em;font-size:9px}
