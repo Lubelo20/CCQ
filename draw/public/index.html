@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0f2a1d"><meta name="description" content="Find your four-ball for the CCQ Fundraising Golf Day (3rd Edition), hosted by the Congregational Church of Queensburgh. Friday 23 October 2026 at Amanzimtoti Golf Course.">
+<title>The Draw · CCQ Fundraising Golf Day</title>
+<meta property="og:type" content="website"><meta property="og:site_name" content="CCQ Fundraising Golf Day"><meta property="og:url" content="https://ccq-golf-draw.vercel.app/"><meta property="og:title" content="The Draw · CCQ Golf Day"><meta property="og:description" content="Find your four-ball and starting hole. Friday 23 October 2026 at Amanzimtoti Golf Course."><meta property="og:image" content="https://ccq-golf-draw.vercel.app/og-cover-square.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="1200"><meta property="og:image:alt" content="The Draw · CCQ Golf Day"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="The Draw · CCQ Golf Day"><meta name="twitter:description" content="Find your four-ball and starting hole. Friday 23 October 2026 at Amanzimtoti Golf Course."><meta name="twitter:image" content="https://ccq-golf-draw.vercel.app/og-cover-square.jpg">
+<link rel="preload" as="image" href="/assets/golfday/tee-shot.jpg">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/PlayfairDisplay-normal-latin.woff2" crossorigin>
+<link rel="stylesheet" href="/fonts.css?v=20261008-sky"><link rel="stylesheet" href="/golfday.css?v=20261008-logofull"><link rel="stylesheet" href="/icons.css?v=20261007-1">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="module" src="/draw.js?v=20261008-logoonly"></script>
+<script src="/countdown.js?v=20261008-sky" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#draw">Skip to the draw</a>
+
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <div class="crest"><img src="/assets/golfday/ccq-logo-light.png" width="1224" height="487" alt="The Congregational Church of Queensburgh (CCQ)"></div>
+    <p class="eyebrow">The Draw</p>
+    <h1>CCQ<em>Fundraising Golf Day</em></h1>
+    <p class="edition">3rd Edition · Swinging for a brighter tomorrow</p>
+    <p class="meta">Friday, 23 October 2026 · Amanzimtoti Golf Course</p>
+    <div class="countdown" role="timer" aria-label="Time remaining until tee-off"><div><strong id="days">—</strong><span>DAYS</span></div><div><strong id="hours">—</strong><span>HOURS</span></div><div><strong id="minutes">—</strong><span>MINUTES</span></div><div><strong id="seconds">—</strong><span>SECONDS</span></div></div>
+    <p class="cd-label" id="countdown-label">UNTIL TEE-OFF · 11H00 SAST</p>
+    <a class="btn btn-light" href="#draw">Find your group <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg></a>
+  </div>
+</header>
+
+<div class="page">
+<main class="wrap" id="draw">
+  <p class="welcome">Find your organisation, meet your four-ball and see where you start. Tee-off is at 11h00.</p>
+
+  <section class="chapter" aria-labelledby="draw-title">
+    <div class="ch-head">
+      <div class="ch-title"><span>01</span><h2 id="draw-title">The Golf Day Draw</h2></div>
+      <div class="draw-heading-actions"><span class="pill" id="data-status">Loading draw</span><button id="print" class="btn btn-outline"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/></svg>Print draw</button></div>
+    </div>
+    <div class="stats" id="stats" aria-label="Draw summary"><div class="loading-state">Loading the golf day draw…</div></div>
+    <p class="notice" id="notice" role="status" hidden></p>
+
+    <div class="draw-tools"><div class="tabs" role="group" aria-label="Draw filter"><button class="active" data-filter="all" aria-pressed="true">All groups <span id="count-all">0</span></button><button data-filter="assigned" aria-pressed="false">Assigned <span id="count-assigned">0</span></button><button data-filter="pending" aria-pressed="false">Pending <span id="count-pending">0</span></button></div><label class="search"><svg class="icon search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="search" type="search" placeholder="Search name or hole" aria-label="Search draw"></label></div>
+    <div class="results-row"><p class="results" id="results" aria-live="polite"></p><button class="text-button" id="refresh"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 0 1 15.4-6.4L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.4 6.4L3 16"/><path d="M8 16H3v5"/></svg><span class="btn-label">Refresh draw</span></button></div>
+    <div class="grid" id="groups" aria-busy="true"></div>
+    <div class="empty-state" id="empty" hidden><svg class="icon empty-symbol" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><h3>No groups found</h3><p>Try another name or starting hole.</p><button class="btn btn-outline" id="clear-search">Clear search &amp; filters</button></div>
+    <p class="small">Starting holes are the hole your four-ball begins on. Where several groups share a starting hole, each has its own tee time; holes marked B are the second group starting on that hole. The draw may change; please confirm your allocation at registration.</p>
+  </section>
+
+
+  <section class="chapter" aria-labelledby="day-title">
+    <div class="ch-title"><span>02</span><h2 id="day-title">On the Day</h2></div>
+    <div class="stations">
+      <div><b>11h00</b><span>Tee-off</span></div>
+      <div><b>Betterball</b><span>R2 000 per four-ball</span></div>
+      <div><b>Included</b><span>Green fees, halfway house, prize-giving &amp; dinner</span></div>
+    </div>
+  </section>
+</main>
+</div>
+
+<footer class="closing" id="contact">
+  <div class="closing-inner">
+    <p class="eyebrow">Together we make a difference</p>
+    <h2>CCQ Fundraising Golf Day</h2>
+    <div class="rule"></div>
+    <p class="meta">Friday, 23 October 2026 · Amanzimtoti Golf Course</p>
+    <p class="sign">Play · Connect · Support</p>
+    <p class="contact-label">Information &amp; RSVP · Queen Mtshali</p>
+    <div class="contact"><a href="tel:+27651699788">065 169 9788</a></div>
+    <div class="closing-links"><a href="#home">Back to top</a><a href="https://ccq-golf-day.vercel.app/">Golfers’ guide</a><a href="/admin">Organiser sign in <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></div>
+    <p class="fineprint">© 2026 The Congregational Church of Queensburgh · Draw subject to change</p>
+  </div>
+</footer>
+<div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

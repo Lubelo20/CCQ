@@ -1,0 +1,20 @@
+/* Line icons (inline SVG, currentColor) shared by the public draw and organiser pages. */
+.icon{width:1.2em;height:1.2em;flex:none;display:inline-block;vertical-align:-.22em;stroke-width:1.75}
+a:has(> .icon){display:inline-flex;align-items:center;gap:.45em}
+button:has(> .icon){gap:.55em}
+.button:has(> .icon){gap:14px}
+.button .icon{width:16px;height:16px;transition:transform .2s ease}
+.button:hover .icon{transform:translateY(2px)}
+.organiser-link .icon,footer a .icon{width:1.1em;height:1.1em;transition:transform .2s ease}
+.organiser-link:hover .icon,footer a:hover .icon{transform:translate(2px,-2px)}
+.closing .button .icon{width:17px;height:17px}
+.closing .button:hover .icon{transform:none}
+.search .search-icon{width:18px;height:18px;color:var(--muted)}
+.empty-symbol{display:block;width:40px;height:40px;margin:0 auto 6px;color:var(--gold);stroke-width:1.5}
+.icon-button{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:40px}
+.icon-button .icon{width:22px;height:22px}
+.is-loading .icon{animation:icon-spin .9s linear infinite}
+@keyframes icon-spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.icon,.is-loading .icon{animation:none!important;transition:none!important}}
+@media print{.icon{display:none}}
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}

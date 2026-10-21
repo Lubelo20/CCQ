@@ -1,0 +1,192 @@
+[
+  {
+    "id": "e72012ed-2572-44f0-87c8-466b419ed414",
+    "organisation": "Eric Mzileni",
+    "bookings": 1,
+    "groups": [
+      {
+        "tee": "10",
+        "time": "11:00",
+        "players": [
+          "Eric Mzileni",
+          "Baba Mbokazi",
+          "Mxo Mchunu",
+          "Mathontsi"
+        ]
+      }
+    ],
+    "payment": "pending",
+    "amount": null,
+    "notes": ""
+  },
+  {
+    "id": "b4588129-04dd-48dd-b8a7-9ff1a3be5434",
+    "organisation": "Isiqu",
+    "bookings": 1,
+    "groups": [
+      {
+        "tee": "10",
+        "time": "11:20",
+        "players": [
+          "",
+          "",
+          "",
+          ""
+        ]
+      }
+    ],
+    "payment": "pending",
+    "amount": null,
+    "notes": ""
+  },
+  {
+    "id": "de296947-d1f4-4bf4-8ec5-bda47f4e0ff9",
+    "organisation": "Liberty Life",
+    "bookings": 1,
+    "groups": [
+      {
+        "tee": "1",
+        "time": "10:40",
+        "players": [
+          "Yonela Gwala",
+          "",
+          "",
+          ""
+        ]
+      }
+    ],
+    "payment": "pending",
+    "amount": null,
+    "notes": ""
+  },
+  {
+    "id": "e4d9492a-ad85-4ca9-b8c6-9ce469a8b92c",
+    "organisation": "Mthoko Mtshali",
+    "bookings": 1,
+    "groups": [
+      {
+        "tee": "1",
+        "time": "11:10",
+        "players": [
+          "Mthoko Mtshali",
+          "",
+          "",
+          ""
+        ]
+      }
+    ],
+    "payment": "pending",
+    "amount": null,
+    "notes": ""
+  },
+  {
+    "id": "c9d16997-c749-462b-afeb-f851a479b39f",
+    "organisation": "Ndabe",
+    "bookings": 2,
+    "groups": [
+      {
+        "tee": "10",
+        "time": "11:10",
+        "players": [
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "tee": "10",
+        "time": "11:30",
+        "players": [
+          "",
+          "",
+          "",
+          ""
+        ]
+      }
+    ],
+    "payment": "pending",
+    "amount": null,
+    "notes": ""
+  },
+  {
+    "id": "da5a75f2-dcdc-47cd-939d-ca6862401cda",
+    "organisation": "Nonhlanhla Gumbe",
+    "bookings": 1,
+    "groups": [
+      {
+        "tee": "1",
+        "time": "11:30",
+        "players": [
+          "Nonhlanhla Gumbe",
+          "Sphe Shandu",
+          "Thabisile Nkosi",
+          "Banele Mhlahlo"
+        ]
+      }
+    ],
+    "payment": "pending",
+    "amount": null,
+    "notes": ""
+  },
+  {
+    "id": "c27e93e1-294a-44bb-a900-d46f035c55d2",
+    "organisation": "President Dlomo",
+    "bookings": 1,
+    "groups": [
+      {
+        "tee": "1",
+        "time": "11:20",
+        "players": [
+          "President Dlomo",
+          "",
+          "",
+          ""
+        ]
+      }
+    ],
+    "payment": "pending",
+    "amount": null,
+    "notes": ""
+  },
+  {
+    "id": "6baf9f37-032d-43bb-9c68-f8c39a60ab69",
+    "organisation": "Shaka Langa",
+    "bookings": 1,
+    "groups": [
+      {
+        "tee": "1",
+        "time": "11:00",
+        "players": [
+          "Shaka Langa",
+          "",
+          "",
+          ""
+        ]
+      }
+    ],
+    "payment": "pending",
+    "amount": null,
+    "notes": ""
+  },
+  {
+    "id": "97eeef84-d731-49ce-8032-689ba9d7daa7",
+    "organisation": "Stephen Liebernbeg",
+    "bookings": 1,
+    "groups": [
+      {
+        "tee": "10",
+        "time": "11:40",
+        "players": [
+          "Stephen Liebernbeg",
+          "",
+          "",
+          ""
+        ]
+      }
+    ],
+    "payment": "pending",
+    "amount": null,
+    "notes": ""
+  }
+]

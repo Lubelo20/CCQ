@@ -1,0 +1,22 @@
+{
+  "name": "ccq-golf-draw",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node dev.mjs",
+    "test": "node --test tests.mjs tests/*.test.mjs",
+    "db:migrate": "node scripts/migrate.mjs",
+    "db:seed": "node scripts/seed.mjs",
+    "db:check": "node scripts/check-db.mjs",
+    "check": "node --check api/draw.js && node --check lib/database.js && node --check lib/local-database.js && node --check dev.mjs && node --check public/admin.js && node --check public/draw.js && node --check public/ui.js && node --check public/countdown.js && node --check public/logos.js",
+    "start": "node dev.mjs",
+    "setup:local": "node scripts/setup-local.mjs"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0"
+  }
+}
