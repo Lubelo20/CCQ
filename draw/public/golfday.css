@@ -38,6 +38,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .btn-outline{background:rgba(255,255,255,.9);color:var(--ink);border-color:rgba(20,26,34,.18)}
 .btn-outline:hover{background:#fff;color:var(--accent-text);border-color:var(--accent)}
 .btn-light{margin-top:34px;background:rgba(10,30,20,.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-color:rgba(255,255,255,.4);color:#fbf7f0}
+.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:34px}
+.hero-actions .btn-light{margin-top:0;min-width:250px}
 .btn-light:hover{background:rgba(10,30,20,.55);border-color:var(--accent-soft);color:var(--accent-soft)}
 .text-button{display:inline-flex;align-items:center;gap:8px;border:0;background:none;padding:6px 0;color:var(--ink);font:500 9.5px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;border-bottom:1px solid var(--accent)}
 .text-button:hover{color:var(--accent-text)}

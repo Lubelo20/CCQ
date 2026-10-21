@@ -70,6 +70,7 @@ npm test             # API, request pipeline, persistence, and transaction tests
 npm run db:migrate   # Apply PostgreSQL schema to DATABASE_URL
 npm run db:seed      # Import original bookings into PostgreSQL once
 npm run db:check     # Read-only PostgreSQL connection and record count check
+npm run sync:guide   # Copy ../guide/dist into public/info (served at /info/)
 ```
 
 Tests use temporary SQLite databases and injected repositories. They verify login, signed sessions, password rotation, origin checks, request parsing/limits, CRUD, private-field redaction, stale updates/deletions, tee conflicts and rollback, seed idempotence, storage persistence, rate limiting, and validation. The request pipeline is exercised through Node streams, without opening a network port. A real Neon connection and deployed browser smoke test are still required for production verification.
@@ -86,7 +87,8 @@ Tests use temporary SQLite databases and injected repositories. They verify logi
 | public/countdown.js | Hero countdown to registration |
 | public/draw.json | Public-only snapshot of the draw (21 October 2026), shown if the live draw can't load |
 | public/assets/golfday/ | CCQ logo (cut from the client's flyer) and photography shared with the guide |
-| public/assets/logos/, public/logos.js | Organisation logos for draw cards (none yet; initials are shown) |
+| public/assets/logos/, public/logos.js | Organisation logos for draw cards; organisations without one show initials |
+| public/info/ | Copy of the golfers' guide served at `/info/` (event info and dress code). Edit `../guide/dist`, then run `npm run sync:guide` |
 | api/draw.js | Validation, authentication, throttling, status and CRUD API |
 | lib/database.js | Parameterized Neon queries, optimistic concurrency |
 | lib/local-database.js | Transactional persistent local SQLite repository |

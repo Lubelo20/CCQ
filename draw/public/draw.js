@@ -14,11 +14,12 @@ function setFilter(value) {
 }
 function render() {
   const all = groups(), assigned = all.filter(g => g.tee).length;
+  const holes = [...new Set(all.filter(g => g.tee).map(g => g.tee))].sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
   const named = all.reduce((n, g) => n + g.players.filter(Boolean).length, 0);
   const q = $('#search').value.trim().toLowerCase();
   const visible = all.filter(g => (filter === 'all' || (filter === 'assigned' ? !!g.tee : !g.tee)) && `${g.organisation} ${g.tee} ${g.time || ''} ${g.players.join(' ')}`.toLowerCase().includes(q))
     .sort((a, b) => byStart(a, b) || a.organisation.localeCompare(b.organisation));
-  stats('#stats', [[entries.length, 'Organisations', 'Joining us on the green'], [all.length, 'Booked groups', 'Four golfers per group'], [assigned, 'Starting holes assigned', `${all.length - assigned} awaiting allocation`], [named, 'Named golfers', `${all.length * 4} available player slots`]]);
+  stats('#stats', [[entries.length, 'Organisations', 'Joining us on the green'], [all.length, 'Booked groups', 'Four golfers per group'], [holes.join(' & ') || '—', 'Starting holes', all.length - assigned ? `${assigned} of ${all.length} groups allocated` : 'Every group has a tee time'], [named, 'Named golfers', `of ${all.length * 4} player places`]]);
   $('#count-all').textContent = all.length; $('#count-assigned').textContent = assigned; $('#count-pending').textContent = all.length - assigned;
   $('#results').textContent = `Showing ${visible.length} of ${all.length} groups`;
   $('#groups').replaceChildren(...visible.map(g => {
@@ -67,7 +68,7 @@ async function load(manual = false) {
       try {
         entries = (await request('/draw.json')).data; source = 'preview';
         $('#data-status').textContent = 'Saved draw';
-        $('#notice').hidden = false; $('#notice').textContent = 'The live draw is unavailable. Showing the last saved copy of the draw; later changes are not included. Please confirm your allocation at registration.';
+        $('#notice').hidden = false; $('#notice').textContent = 'You are viewing a saved copy of the draw, so the latest changes may be missing. Please confirm your tee time at registration.';
       } catch { entries = []; $('#notice').hidden = false; $('#notice').textContent = 'Unable to load the draw. Use Refresh draw to try again.'; $('#data-status').textContent = 'Unavailable'; }
     }
     $('#data-status').classList.remove('live');

@@ -38,7 +38,7 @@ export function createServer(handler) {
       }
       if (!['GET', 'HEAD'].includes(req.method)) { json(405, { error: 'Method not allowed.' }); return; }
       const name = decodeURIComponent(url.pathname);
-      const file = path.resolve(root, '.' + (name === '/' ? '/index.html' : name === '/admin' ? '/admin.html' : name));
+      const file = path.resolve(root, '.' + (name === '/' ? '/index.html' : name === '/admin' ? '/admin.html' : name === '/info' || name === '/info/' ? '/info/index.html' : name));
       if (!file.startsWith(root + path.sep)) { json(403, { error: 'Forbidden.' }); return; }
       const data = await readFile(file);
       res.setHeader('Content-Type', types[path.extname(file)] || 'application/octet-stream');

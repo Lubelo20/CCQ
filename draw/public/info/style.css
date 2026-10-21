@@ -1,0 +1,280 @@
+/* CCQ Fundraising Golf Day — golfers’ guide.
+   Layout follows the OG Molefe aide mémoire: dark photo hero with crest, welcome line, host card,
+   numbered left-aligned chapters with two-column cards, dark format panel, split dinner card,
+   checklist reminders and a dark closing band. Photos are shown clean — no colour overlays on them. */
+:root{
+  --ink:#141a22;--ink-2:#2a313b;--text:#5c616a;--muted:#8d9198;
+  --dark:#0f2a1d;--dark-2:#173a29;
+  --accent:#b8902f;--accent-text:#80621a;--accent-soft:#e6d49c;
+  --paper:#faf8f4;--card:#fffefb;--peach:#f1efe4;
+  --line:rgba(20,26,34,.1);--line-soft:rgba(20,26,34,.06);
+  --serif:'Playfair Display',Georgia,serif;--sans:'Montserrat',Arial,sans-serif;
+  --shadow:0 1px 2px rgba(15,42,29,.04),0 18px 40px -24px rgba(15,42,29,.28);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font:400 15px/1.85 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--ink);margin:0;line-height:1.2}
+p{margin:0 0 16px}
+strong{color:var(--ink);font-weight:600}
+.eyebrow,.label{font:500 9.5px/1.6 var(--sans);letter-spacing:.4em;text-transform:uppercase;color:var(--accent-text)}
+.rule{width:56px;height:1px;background:var(--accent-soft);margin:26px auto}
+.link{color:var(--ink);font-weight:500;border-bottom:1px solid var(--accent);padding-bottom:1px}
+.link:hover{color:var(--accent-text)}
+a[href^="tel:"]{white-space:nowrap}
+a:focus-visible{outline:1px solid var(--accent);outline-offset:4px}
+
+/* ── HERO: the photo stays crisp; a soft neutral shade only keeps the text legible ── */
+.hero{position:relative;min-height:92vh;display:grid;place-items:center;text-align:center;padding:90px 24px 80px;color:#f3efe8;
+  background:linear-gradient(180deg,rgba(10,30,20,.6) 0%,rgba(10,30,20,.32) 42%,rgba(10,30,20,.32) 62%,rgba(10,30,20,.72) 100%),url('assets/tee-shot.jpg') center 72%/cover;background-color:var(--dark)}
+.hero-inner{max-width:900px}
+.crest{width:280px;margin:0 auto 26px;filter:drop-shadow(0 4px 18px rgba(0,0,0,.45))}
+.hero .eyebrow{color:#e0dcc8;letter-spacing:.5em}
+.hero h1{margin:20px 0 0;font-size:clamp(40px,5.6vw,74px);line-height:1.08;color:#fbf7f0;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero h1 em{display:block;font-style:italic;color:#fbf7f0}
+.edition{display:flex;align-items:center;justify-content:center;gap:16px;margin:26px 0 12px;font:500 10px/1 var(--sans);letter-spacing:.42em;text-transform:uppercase;color:#e0dcc8}
+.edition:before,.edition:after{content:'';width:40px;height:1px;background:rgba(224,220,200,.6)}
+.hero .meta{font:400 14px/1.6 var(--sans);letter-spacing:.06em;color:#efe9e0}
+.countdown{display:inline-flex;margin-top:34px;border-top:1px solid rgba(255,255,255,.28);border-bottom:1px solid rgba(255,255,255,.28)}
+.countdown[hidden]{display:none}
+.countdown div{padding:16px 24px;min-width:104px}
+.countdown div+div{border-left:1px solid rgba(255,255,255,.2)}
+.countdown strong{display:block;font:400 42px/1 var(--serif);color:#fff;font-variant-numeric:lining-nums tabular-nums}
+.countdown span{display:block;margin-top:10px;font:500 8.5px/1 var(--sans);letter-spacing:.36em;color:#d9d4cc}
+.cd-label{margin-top:16px;font:500 9.5px/1 var(--sans);letter-spacing:.38em;color:#e0dcc8}
+
+/* ── BODY ─────────────────────────────── */
+.wrap{max-width:860px;margin:auto;padding:0 28px}
+.welcome{max-width:560px;margin:72px auto 0;text-align:center;font-size:16px;line-height:1.8;color:var(--text);padding-bottom:40px;border-bottom:1px solid var(--line)}
+.host{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-top:40px}
+.host-img{box-shadow:var(--shadow)}
+.host-img img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 40%}
+.host-img.portrait img{aspect-ratio:4/5;object-position:center}
+.host:has(.portrait){grid-template-columns:2fr 3fr}
+.host-txt h2{font-size:32px;margin:10px 0 16px}
+.host-txt p:last-child{font-size:14px;margin:0}
+
+.chapter{padding-top:64px;margin-top:64px;border-top:1px solid var(--line-soft)}
+.host+.chapter{border-top:1px solid var(--line)}
+.ch-title{display:flex;align-items:center;gap:18px;margin-bottom:22px}
+.ch-title>span{font:500 10px/1 var(--sans);letter-spacing:.3em;color:var(--accent-text)}
+.ch-title h2{font-size:clamp(28px,3.4vw,36px);white-space:nowrap;color:#b8902f}
+.ch-title i{flex:1;height:1px;background:var(--line)}
+.chapter>p{font-size:14px}
+.small{font-size:13px!important;color:var(--muted);margin-top:18px}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);padding:28px 30px}
+.card h3{font-size:22px;margin-bottom:12px}
+.card p{font-size:13.5px}
+.card p:last-child{margin:0}
+.card .label{margin:0}
+.card .time{font:400 30px/1.2 var(--serif);color:var(--ink);margin:8px 0 0}
+.card .who{margin:10px 0 0;font-size:13px;line-height:1.5;color:var(--muted)}
+.card .who b{color:var(--ink);font-weight:700}
+.tee-row .card:nth-child(2){border-color:rgba(184,144,47,.45)}
+.list{line-height:2.1}
+.stations{margin-top:16px}
+.stations>div{background:var(--card);border:1px solid var(--line);padding:20px 16px;text-align:center}
+.stations b{display:block;font:400 22px/1.2 var(--serif);color:var(--ink);font-weight:400}
+.stations span{display:block;margin-top:6px;font-size:12.5px;color:var(--muted)}
+.stations.peach>div{background:var(--peach);border-color:rgba(184,144,47,.18)}
+
+/* Format: dark panel, as in the reference */
+.feature{background:linear-gradient(180deg,rgba(10,30,20,.62),rgba(10,30,20,.38) 55%,rgba(10,30,20,.6)),url('assets/tee-shot.jpg') center 58%/cover;background-color:var(--dark);text-shadow:0 1px 14px rgba(0,0,0,.45);text-align:center;padding:46px 36px 40px;color:#d9dde3;box-shadow:var(--shadow)}
+.feature .eyebrow{color:var(--accent-soft)}
+.feature h3{color:#fbf7f0;font-size:clamp(28px,3.6vw,38px);margin:12px 0 8px}
+.feature .sub{font:italic 400 16px/1.5 var(--serif);color:#e0dcc8;margin:0}
+.feature .rule{background:rgba(230,212,156,.6)}
+.feature .cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;font-size:13px;line-height:1.8}
+.feature .cols p{margin:0}
+
+/* Sponsors */
+.holes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tables{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.tables figure{margin:0;text-align:center}
+.tables img{display:block;width:100%;height:auto;border-radius:var(--radius);box-shadow:var(--silk-shadow)}
+.tables figcaption{margin-top:10px;font:500 12px/1.4 var(--sans);color:var(--ink-2)}
+.tables figcaption b{display:block;font:800 14px/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+.hole{background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);padding:24px 18px 26px;text-align:center}
+.hole .n{font:800 14px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--accent-text)}
+.hole .logo{height:140px;display:grid;place-items:center;padding:14px 4px}
+.hole .logo img{max-height:84px;max-width:200px;width:auto;object-fit:contain}
+.hole .logo img.wide{max-width:100%}
+.wordmark{font:800 36px/1 var(--sans);letter-spacing:-.03em;color:var(--ink)}
+.wordmark i{font-style:normal;color:var(--accent)}
+.wordmark.long{font-size:26px;line-height:1.15;letter-spacing:-.02em}
+.hole b{display:block;font:800 15px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+
+/* Dinner: image left, details right */
+.dinner{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}
+.dinner-img img{width:100%;height:100%;min-height:340px;object-fit:cover}
+.dinner-txt{padding:34px 32px;align-self:center}
+.dinner-txt>p{font-size:13.5px}
+.dinner dl{margin:20px 0 0;display:grid;gap:16px}
+.dinner dt{font:500 9.5px/1 var(--sans);letter-spacing:.36em;text-transform:uppercase;color:var(--accent-text)}
+.dinner dd{margin:6px 0 0;font:400 22px/1.3 var(--serif);color:var(--ink)}
+
+/* Course */
+.course .card h3{margin-bottom:10px}
+.course .map{padding:12px;display:grid;place-items:center}
+.course .map img{max-height:380px;width:auto}
+.btn{display:inline-block;margin:6px 0 22px;padding:13px 26px;background:var(--dark);color:#fff;font:500 9.5px/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;transition:background .3s}
+.btn:hover{background:var(--accent-text)}
+
+/* Reminders: checklist */
+.reminders{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;padding:0;margin:0;list-style:none}
+.reminders li{position:relative;padding:12px 0 12px 26px;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
+.reminders li:before{content:'✓';position:absolute;left:2px;top:12px;color:var(--accent);font-size:13px}
+
+/* ── CLOSING: dark band ─────────────────────────────── */
+.closing{margin-top:96px;background:linear-gradient(180deg,rgba(10,30,20,.7) 0%,rgba(10,30,20,.42) 50%,rgba(10,30,20,.78) 100%),url('assets/tee-shot.jpg') center 62%/cover;background-color:var(--dark);text-shadow:0 1px 14px rgba(0,0,0,.45);color:#cfd3d9;text-align:center}
+.closing-inner{max-width:980px;margin:auto;padding:76px 24px 44px}
+.closing .eyebrow{color:var(--accent-soft)}
+.closing h2{color:#fbf7f0;font-size:clamp(26px,3.6vw,38px);line-height:1.25;margin:16px 0 0}
+.closing .rule{background:rgba(230,212,156,.6)}
+.closing .meta{font-size:13.5px;letter-spacing:.04em;margin:0}
+.sign{margin:18px 0 0;font:italic 400 18px/1.4 var(--serif);color:#e0dcc8}
+.contact-label{margin:42px 0 0;font:500 9.5px/1 var(--sans);letter-spacing:.4em;text-transform:uppercase;color:#9aa1aa}
+.contact{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:16px}
+.contact a{background:rgba(10,30,20,.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.3);padding:13px 22px;color:#fbf7f0;font-size:13px;transition:all .3s}
+.contact a:hover{border-color:var(--accent-soft);color:var(--accent-soft)}
+.top{display:inline-block;margin-top:44px;font:500 9px/1 var(--sans);letter-spacing:.36em;text-transform:uppercase;color:#8e959e}
+.top:hover{color:var(--accent-soft)}
+
+/* ── ENTRANCE ANIMATIONS (Animate.css / Elementor style, as on bestofthebestmarathon.co.za) ──
+   Used on four areas only (schedule, food, reminders, closing): elements wait hidden, then play fadeInLeft / fadeInRight / fadeInUp when
+   they scroll into view. Disabled for reduced-motion users. */
+body{overflow-x:clip}
+@keyframes fadeInLeft{from{opacity:0;transform:translate3d(-100%,0,0)}to{opacity:1;transform:none}}
+@keyframes fadeInRight{from{opacity:0;transform:translate3d(100%,0,0)}to{opacity:1;transform:none}}
+@keyframes fadeInUp{from{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:none}}
+@keyframes fadeInUpSmall{from{opacity:0;transform:translate3d(0,60px,0)}to{opacity:1;transform:none}}
+.anim-on .anim-wait{opacity:0}
+.anim-on .animated{animation-duration:1.25s;animation-fill-mode:both;animation-timing-function:ease}
+.anim-on .animated.fast{animation-duration:.9s}
+.anim-on .fadeInLeft{animation-name:fadeInLeft}
+.anim-on .fadeInRight{animation-name:fadeInRight}
+.anim-on .fadeInUp{animation-name:fadeInUp}
+.anim-on .fadeInUpSmall{animation-name:fadeInUpSmall}
+
+@media(max-width:720px){
+  html,body{overflow-x:hidden}
+  /* hero */
+  .hero{min-height:auto;padding:64px 20px 56px;background-position:center,68% 72%}
+  .crest{width:210px;margin-bottom:20px}
+  .hero .eyebrow{letter-spacing:.38em}
+  .hero h1{font-size:32px;line-height:1.15;margin-top:14px}
+  .edition{gap:0;margin:20px 0 10px;font-size:9px;line-height:1.8;letter-spacing:.32em;text-align:center}
+  .edition:before,.edition:after{display:none}
+  .hero .meta{font-size:13px;line-height:1.6;max-width:260px;margin:0 auto}
+  .countdown{width:100%;margin-top:26px}.countdown div{flex:1;min-width:0;padding:12px 2px}.countdown strong{font-size:30px}.countdown span{letter-spacing:.12em;font-size:9px}
+  .cd-label{font-size:8.5px;letter-spacing:.28em}
+  /* body */
+  .wrap{padding:0 18px}
+  .welcome{margin-top:48px;font-size:15px;padding-bottom:32px}
+  .host,.host:has(.portrait){grid-template-columns:1fr;gap:22px;margin-top:32px}
+  .host-txt h2{font-size:27px;margin:8px 0 12px}
+  .chapter{padding-top:44px;margin-top:44px}
+  .ch-title{flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:18px}
+  .ch-title h2{font-size:27px;white-space:normal}
+  .ch-title i{display:none}
+  .grid2,.grid3,.dinner,.feature .cols,.reminders{grid-template-columns:1fr}
+  .grid2{gap:14px}
+  .card{padding:22px 22px}
+  .card h3{font-size:20px;margin-bottom:8px}
+  .card .label{letter-spacing:.3em}
+  .card .time{font-size:27px}
+  /* time and food stations become compact rows */
+  .stations{gap:8px;margin-top:12px}
+  .stations>div{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 12px;text-align:left;padding:14px 18px}
+  .stations b{font-size:19px;white-space:nowrap}
+  .stations span{flex:1 1 auto;margin:0;font-size:12px;text-align:right}
+  /* format */
+  .feature{padding:34px 20px 30px}
+  .feature h3{font-size:28px}
+  .feature .sub{font-size:15px}
+  .feature .rule{margin:20px auto}
+  .feature .cols{gap:14px}
+  .feature .cols br{display:none}
+  /* sponsors */
+  .holes{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .tables{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .hole{padding:18px 10px 20px}
+  .hole .n{font-size:12px;letter-spacing:.16em}
+  .hole .logo{height:110px;padding:10px 2px}
+  .hole .logo img{max-width:100%;max-height:66px}
+  .wordmark{font-size:28px}
+  .wordmark.long{font-size:19px}
+  .hole b{font-size:12.5px;letter-spacing:.05em}
+  /* dinner, course */
+  .dinner-img img{min-height:200px;aspect-ratio:3/2}
+  .dinner-txt{padding:24px 22px 26px}
+  .dinner dd{font-size:20px}
+  .course .map img{max-height:none}
+  .btn{display:block;text-align:center}
+  .reminders li{font-size:13.5px}
+  /* closing */
+  .closing{margin-top:64px}
+  .closing-inner{padding:56px 20px 36px}
+  .closing h2{font-size:27px}
+  .closing .meta{max-width:250px;margin:0 auto}
+  .contact a{width:100%}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ── WHITE SILK THEME (from the table cards) ─────────────────────────────
+   The page sits on a clean light orange. White cards share one radius
+   and a soft shadow; section numbers are small orange tags; no divider lines. */
+:root{--muted:#61666e;--accent-text:#7a5d18;--radius:6px;--silk-shadow:0 1px 2px rgba(20,26,34,.05),0 14px 34px -20px rgba(20,26,34,.28)}
+html{background:#f6f3e6}
+/* Page background: a clean, smooth light green-cream with a gentle lighter glow behind
+   the content column, so the white cards stand out. No photo texture. */
+.page{display:flow-root;background:radial-gradient(900px 520px at 50% 0,rgba(255,255,255,.6),rgba(255,255,255,0) 72%),linear-gradient(180deg,#e6eee2 0,#edf1e7 520px,#f6f3e6 100%);background-color:#f6f3e6;padding-bottom:96px}
+/* On the peach page: deeper orange headings for contrast, and white station tiles so they don't blend in. */
+.ch-title h2{color:#80621a}
+.stations.peach>div{background-color:#fff}
+body{background:transparent}
+.welcome{border:0;padding-bottom:0;font-size:17px;color:var(--ink-2)}
+.host{margin-top:56px}
+.host-img,.host-img img{border-radius:var(--radius)}
+.host-img{box-shadow:var(--silk-shadow);overflow:hidden}
+.chapter,.host+.chapter{border-top:0;margin-top:40px}
+.ch-title{flex-direction:column;align-items:flex-start;gap:12px}
+.ch-title>span{display:inline-block;padding:6px 10px 5px;background:var(--accent);border-radius:999px;color:#fff;font-weight:600;letter-spacing:.24em;line-height:1}
+.ch-title i{display:none}
+.card,.hole,.dinner,.stations>div,.stations.peach>div,.feature,.course .map{border:1px solid rgba(20,26,34,.06);border-radius:var(--radius);box-shadow:var(--silk-shadow);background-color:rgba(255,255,255,.92)}
+.feature{background-color:var(--dark);border:0}
+.dinner{overflow:hidden}
+.reminders{background:rgba(255,255,255,.92);border:1px solid rgba(20,26,34,.06);border-radius:var(--radius);box-shadow:var(--silk-shadow);padding:10px 30px}
+.reminders li:nth-last-child(-n+2){border-bottom:0}
+.closing{margin-top:0}
+@media(max-width:720px){
+  .page{padding-bottom:64px}
+  .reminders{padding:6px 20px}
+  .reminders li:nth-last-child(2){border-bottom:1px solid var(--line)}
+  .ch-title{gap:10px}
+}
+
+/* ── SPONSOR RULES PAGE (rules.html) ─────────────────────────────────────── */
+.hero.hero-short{min-height:56vh}
+.hero.hero-short .meta{margin-top:22px}
+.feature.fee h3{font-size:clamp(30px,4vw,42px)}
+.feature.fee{margin-bottom:16px}
+#programme .stations+.grid2,#programme .stations+.grid3{margin-top:16px}
+.price-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.price-group h3{margin-bottom:14px;font-weight:500;font-size:26px;color:var(--ink)}
+.prices{width:100%;border-collapse:collapse;font-size:16px}
+.prices th{font:800 12px/1.6 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--accent-text);text-align:left;padding:0 0 8px;border-bottom:1px solid var(--line)}
+.prices th:last-child,.prices td:last-child{text-align:right;white-space:nowrap;padding-left:12px}
+.prices td{padding:11px 0;line-height:1.35;border-bottom:1px solid var(--line);font-weight:700;color:var(--ink)}
+.prices td:last-child{font-weight:800;font-size:17px;color:var(--accent-text)}
+.prices tr:last-child td{border-bottom:0}
+.closing .top+.top{margin-left:18px}
+@media(max-width:720px){.price-grid{grid-template-columns:1fr}.hero.hero-short{min-height:auto}
+  .top{margin-top:28px;padding:14px 6px}.closing .top+.top{margin-left:10px}}
+.host.solo{grid-template-columns:1fr;max-width:720px;margin-inline:auto;text-align:center}

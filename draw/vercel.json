@@ -4,6 +4,10 @@
     {
       "source": "/admin",
       "destination": "/admin.html"
+    },
+    {
+      "source": "/info",
+      "destination": "/info/index.html"
     }
   ],
   "headers": [
