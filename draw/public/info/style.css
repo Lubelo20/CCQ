@@ -283,3 +283,17 @@ body{background:transparent}
 @media(max-width:720px){.price-grid{grid-template-columns:1fr}.hero.hero-short{min-height:auto}
   .top{margin-top:28px;padding:14px 6px}.closing .top+.top{margin-left:10px}}
 .host.solo{grid-template-columns:1fr;max-width:720px;margin-inline:auto;text-align:center}
+
+/* Hero link back to the draw, and tighter spacing on phones */
+.hero-btn{display:inline-flex;justify-content:center;margin-top:30px;padding:13px 24px;border:1px solid rgba(255,255,255,.4);background:rgba(10,30,20,.35);color:#fbf7f0;font:500 9.5px/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;transition:border-color .3s,color .3s}
+.hero-btn:hover{border-color:#e6d49c;color:#e6d49c}
+@media(max-width:720px){
+  .hero{padding:44px 20px 40px}
+  .crest{width:170px;margin-bottom:14px}
+  .hero-btn{margin-top:24px;min-width:250px}
+  .welcome{margin-top:32px;padding-bottom:0}
+  .host,.host:has(.portrait){margin-top:28px}
+  .chapter,.host+.chapter{padding-top:0;margin-top:48px}
+}
+.closing .top{color:rgba(251,247,240,.82)}
+.closing .top:hover{color:#e6d49c}
