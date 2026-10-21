@@ -10,6 +10,7 @@ const LOGOS = {
   'president dlomo': { file: 'od-investments.jpg', tone: 'navy', mark: true },
   'ndabe': { file: 'ndabe-dignified-group.png', mark: true },
   'liberty life': { file: 'liberty.png', mark: true },
+  'isiqu': { file: 'isiqu.png', mark: true }, // Isiqu Accountants; from isiquaccountants.co.za, recoloured to their teal
 };
 const LEGAL = /\b(pty|ltd|inc|npc|limited|cc)\b/g;
 const key = name => name.toLowerCase().replace(/[’']/g, '').replace(/&/g, ' and ').replace(LEGAL, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
