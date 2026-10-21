@@ -9,7 +9,7 @@ const LOGOS = {
   'mthoko mtshali': { file: 'galela-mashenge-foundation.png', tone: 'dark', mark: true }, // cut from a Mashenge Open poster; replace with an original file if supplied
   'president dlomo': { file: 'od-investments.jpg', tone: 'navy', mark: true },
   'ndabe': { file: 'ndabe-dignified-group.png', mark: true },
-  'liberty life': { file: 'liberty.png', mark: true }, // cut from a WhatsApp image; replace with an original file if supplied
+  'liberty life': { file: 'liberty.png', mark: true },
 };
 const LEGAL = /\b(pty|ltd|inc|npc|limited|cc)\b/g;
 const key = name => name.toLowerCase().replace(/[’']/g, '').replace(/&/g, ' and ').replace(LEGAL, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
