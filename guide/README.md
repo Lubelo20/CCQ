@@ -18,6 +18,8 @@ The dress code (white golf T-shirt, black pants) was confirmed by the client on 
 
 Hole sponsors (client, 21 October 2026): hole 1 Mnandi Meats and LCM Ludidi Properties, hole 12 Isiqu Accountants (Hole in One; logo from isiquaccountants.co.za, recoloured teal), hole 18 Ndabe Funeral. Logos are in `dist/assets/sponsors/`.
 
+Brai, prize-giving and dinner at 17h30 (client, 22 October 2026).
+
 On-course competitions (client, 21 October 2026): nearest to the pin hole 7 men, hole 9 ladies; longest drive hole 3 men, hole 10 ladies.
 
 Not yet supplied, so not on the page: registration time, schedule after tee-off, venue address and an email contact.

@@ -46,6 +46,7 @@
       <div class="card"><p class="label">Date</p><p class="time">23 October</p><p class="who">Friday, 2026</p></div>
       <div class="card"><p class="label">Tee-Off</p><p class="time">11h00</p></div>
       <div class="card"><p class="label">Venue</p><p class="time">Amanzimtoti</p><p class="who">Golf Course</p></div>
+      <div class="card"><p class="label">Dinner</p><p class="time">17h30</p><p class="who">Brai &amp; prize-giving</p></div>
     </div>
     <p class="small">Groups start from the <strong>1st and 10th tees</strong> at ten-minute intervals. Find your starting hole and tee time on <a class="link" href="/">the draw</a>, and please arrive early enough to register before your tee time.</p>
   </section>
@@ -65,8 +66,8 @@
     <div class="grid2 stations peach">
       <div><b>Green fees</b><span>Your round on the day</span></div>
       <div><b>Halfway house</b><span>Refreshments at the turn</span></div>
-      <div><b>Prize-giving</b><span>Celebrating the day’s winners</span></div>
-      <div><b>Dinner</b><span>After the golf</span></div>
+      <div><b>Prize-giving</b><span>At the 17h30 brai dinner</span></div>
+      <div><b>Brai dinner</b><span>17h30, after the golf</span></div>
     </div>
   </section>
 
@@ -136,3 +137,8 @@
 <script src="/info/reveal.js"></script>
 </body>
 </html>
+
+/* The Day: four details (date, tee-off, venue, brai dinner) */
+.tee-row{grid-template-columns:repeat(4,1fr)}
+@media(max-width:960px){.tee-row{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.tee-row{grid-template-columns:1fr}}
